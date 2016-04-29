@@ -11,7 +11,7 @@ pl-macro-etym.pdf : pl-macro-etym.md
 
 mla: 
 	cat pl-macro-etym.md works-cited.tex > pl-macro-etym-full.md
-	pandoc -o pl-macro-etym.pdf pl-macro-etym-full.md \
+	pandoc -o pl-macro-etym-mla.pdf pl-macro-etym-full.md \
 		--smart \
 		-V colorlinks \
 		-V mainfont='Linux Libertine O' \
@@ -19,4 +19,4 @@ mla:
 		--template=mla-template.tex \
 		--filter pandoc-crossref \
 		--filter pandoc-citeproc
-	evince pl-macro-etym.pdf &
+	evince pl-macro-etym-mla.pdf &
